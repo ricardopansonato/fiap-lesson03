@@ -2,15 +2,10 @@ package br.com.fiap.ex01;
 
 public class Main {
 
-	public static void main(String[] args) {
-		ContaPoupanca p = new ContaPoupanca();
-		p.setNome("Teste1");
-		p.setSaldo(10d);
-		
-		ContaPoupanca p1 = new ContaPoupanca();
-		p1.setNome("Teste1");
-		p1.setSaldo(20d);
-		
+	public static void main(String[] args) throws SaldoInsuficiente {
+		ContaPoupanca p = new ContaPoupanca(0d, "Teste", "12");
+		p.sacar(10d);
+		ContaPoupanca p1 = new ContaPoupanca(0d, "Teste1", "123");
 		ContaPoupanca p2 = p1; 
 		
 		System.out.println(p.equals(p1));
